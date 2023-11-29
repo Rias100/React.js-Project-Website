@@ -1,0 +1,62 @@
+//the reason why we using scss is thats its gonna make every thing much faster
+//we don't have to give class name to each Item 
+
+//Building the Scroll effect
+
+html, body, #root ,.appContainer{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    //background:linear-gradient(180deg,#1f4f78,#00000000);
+    
+}
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    //linear-gradient(180deg,#1F4E78,#000000)
+    font-family:'Times New Roman', Times, serif;
+    //background:linear-gradient(180deg,#1F4E78,#000000);
+    color:#FFD39B;
+    
+}
+a{
+    text-decoration: none;
+    color: inherit; //take the color from Parent, the Parent  is body (color is lightgray)
+
+}
+//section height
+section{
+    height: 100vh;
+    scroll-snap-align: center;
+}
+.course{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .box{
+        width:200px;
+        height: 200px;
+        background-color: aliceblue;
+    }
+
+}
+
+@mixin mobile {
+    @media (max-width: 738px){
+        @content;
+    }
+}
+@mixin tablet {
+    @media (max-width: 1024px){
+        @content;
+    }
+}
+@mixin desktop {
+    @media (max-width: 1366px){
+        @content;
+    }
+}
